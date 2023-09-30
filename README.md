@@ -4,4 +4,4 @@
 #### 스터디 리스트
 > `kokoa-clone-2020`
 
-> `airbnb-clone`
+> `airbnb-clone-2022`
