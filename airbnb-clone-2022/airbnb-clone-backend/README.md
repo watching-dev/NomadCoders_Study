@@ -12,10 +12,12 @@
 
 >>> poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
 
->>>> poetry add django (장고 설치)
+>>>> poetry add django -> (장고 설치)
 
->>>>> 가상환경에 들어가서 장고 시작 -> poetry shell
+>>>>> (가상환경에 들어가서 장고 시작) -> poetry shell
 
->>>>>> django-admin 으로 시작
+>>>>>> django-admin -> (으로 장고 시작)
 
->>>>>>> 가상환경 나가려면 exit
+>>>>>>> (가상환경 나가려면) -> exit
+
+>>>>>>>> (장고 프로젝트 생성) -> django-admin startproject config . -> (현재 폴더에 장고 프로젝트 생성 / 마지막에 .(점) 있는것 확인!!)
