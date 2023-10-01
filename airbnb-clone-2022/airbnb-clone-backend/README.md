@@ -35,3 +35,7 @@
 > (애플리케이션 시작_houses 이름의 앱 시작) -> python manage.py startapp houses
 
 >> (모델 설정 후 앱에 모델 등록) -> config -> settings.py -> INSTALLED_APPS -> 모델명.apps.모델명Config 입력 후 저장하면 인식 됨
+
+>>> (admin에 모델을 연동하면 마이그레이션이 필요함) -> python manage.py makemigrations
+
+>>>> (마이그레이션_이전에도 했었음) python manage.py migrate
