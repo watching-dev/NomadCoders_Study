@@ -10,6 +10,7 @@ class House(models.Model):
     """ config -> settings.py -> INSTALLED_APPS -> houses.apps.HousesConfig 입력 후 저장하면 인식 됨 """
 
     name = models.CharField(max_length=140)
-    price = models.PositiveIntegerField()
+    price_per_night = models.PositiveIntegerField()
     description = models.TextField()
     address = models.CharField(max_length=140)
+    pets_allowed = models.BooleanField(default=True)
