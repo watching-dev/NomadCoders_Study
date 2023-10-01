@@ -22,4 +22,8 @@
 
 >>>>>>>> (장고 프로젝트 생성) -> django-admin startproject config . -> (현재 폴더에 장고 프로젝트 생성 / 마지막에 .(점) 있는것 확인!!)
 
+***
+
 > (서버 시작 - poetry shell 로 가상환경에서 시작해야함) -> python manage.py runserver
+
+>> (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
