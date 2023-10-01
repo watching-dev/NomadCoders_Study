@@ -27,3 +27,5 @@
 > (서버 시작 - poetry shell 로 가상환경에서 시작해야함) -> python manage.py runserver
 
 >> (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
+
+>>> (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
