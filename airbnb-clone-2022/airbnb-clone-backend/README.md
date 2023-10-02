@@ -47,3 +47,7 @@
 >> (비주얼 스튜디오 코드 장고 에러 뜨는건 우하단에 Python 옆 버전 누르면 선택된 인터프리터 열리는데) -> poetry 환경 보일텐데 눌러서 연결 -> 에러 사라짐
 
 >>> (파이썬 자동 수정해주는 extension) Black formatter 라고 있는데, deprecated 됐다는 말이 있던데.., 우선 자동으로 설치 안내는 없었고 -> 검색하니까 뜨네(ms 꺼) -> 일단 설치해봄
+
+***
+
+> (장고의 user를 상속받는 우리만의 user 생성) -> python manage.py startapp users
