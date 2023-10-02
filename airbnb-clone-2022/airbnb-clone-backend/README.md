@@ -51,3 +51,7 @@
 ***
 
 > (장고의 user를 상속받는 우리만의 user 생성) -> python manage.py startapp users
+
+>> (기존 계정을 만들었으면 데이터베이스, 마이그레이션 삭제 후) -> python manage.py makemigrations
+
+>> (기존에 수정한 모델들이 다시 만들어지면) -> python manage.py migrate
