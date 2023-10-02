@@ -55,3 +55,5 @@
 >> (기존 계정을 만들었으면 데이터베이스, 마이그레이션 삭제 후) -> python manage.py makemigrations
 
 >> (기존에 수정한 모델들이 다시 만들어지면) -> python manage.py migrate
+
+>>> (데이터가 날라갔으니 이제 다시 슈퍼유저 추가) -> python manage.py createsuperuser
