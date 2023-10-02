@@ -39,3 +39,11 @@
 >>> (admin에 모델을 연동하면 마이그레이션이 필요함) -> python manage.py makemigrations
 
 >>>> (마이그레이션_이전에도 했었음) python manage.py migrate
+
+***
+
+> (비주얼 스튜디오 코드 extension) -> pylance 설치 (장고 자동으로 찾아줌)
+
+>> (비주얼 스튜디오 코드 장고 에러 뜨는건 우하단에 Python 옆 버전 누르면 선택된 인터프리터 열리는데) -> poetry 환경 보일텐데 눌러서 연결 -> 에러 사라짐
+
+>>> (파이썬 자동 수정해주는 extension) Black formatter 라고 있는데, deprecated 됐다는 말이 있던데.., 우선 자동으로 설치 안내는 없었고 -> 검색하니까 뜨네(ms 꺼) -> 일단 설치해봄
