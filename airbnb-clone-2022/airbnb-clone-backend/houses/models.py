@@ -1,9 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 class House(models.Model):
 
-    """ House Model """
+    """House Model"""
+
     """ Model Definition for Houses """
     """ 여기에 작성하고 저장해도 장고는 알지 못함 """
     """ 장고도 이 어플리케이션이 있다는걸 알려줘야 저장했을때 자동으로 재시작됨 """
@@ -15,6 +17,7 @@ class House(models.Model):
     address = models.CharField(max_length=140)
     pets_allowed = models.BooleanField(default=True)
 
+    owner = models.ForeignKey("users.User", on_delelte=models.CASCADE)
+
     def __str__(self):
-        
         return self.name

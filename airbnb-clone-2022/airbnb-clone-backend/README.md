@@ -23,6 +23,8 @@
 
 `필요한 정보들 작성`
 
+>
+
 > ~~https://python-poetry.org/ 에서 가상환경인 poetry 설치 -->> (하지만 안됨.. // zsh: command not found: poetry // 인텔맥이라 안되나?)~~
 
 > > 프로젝트 폴더로 들어와서 터미널에 brew install poetry 로 설치
@@ -39,7 +41,7 @@
 
 > > > > > > > > (장고 프로젝트 생성) -> django-admin startproject config . -> (현재 폴더에 장고 프로젝트 생성 / 마지막에 .(점) 있는것 확인!!)
 
----
+>
 
 > (서버 시작 - poetry shell 로 가상환경에서 시작해야함) -> python manage.py runserver
 
@@ -47,7 +49,7 @@
 
 > > > (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
 
----
+>
 
 > (애플리케이션 시작\_houses 이름의 앱 시작) -> python manage.py startapp houses
 
@@ -57,7 +59,7 @@
 
 > > > > (마이그레이션\_이전에도 했었음) python manage.py migrate
 
----
+>
 
 > (비주얼 스튜디오 코드 extension) -> pylance 설치 (장고 자동으로 찾아줌)
 
@@ -65,7 +67,7 @@
 
 > > > (파이썬 자동 수정해주는 extension) Black formatter 라고 있는데, deprecated 됐다는 말이 있던데.., 우선 자동으로 설치 안내는 없었고 -> 검색하니까 뜨네(ms 꺼) -> 일단 설치해봄
 
----
+>
 
 > (장고의 user를 상속받는 우리만의 user 생성) -> python manage.py startapp users
 
@@ -74,6 +76,8 @@
 > > (기존에 수정한 모델들이 다시 만들어지면) -> python manage.py migrate
 
 > > > (데이터가 날라갔으니 이제 다시 슈퍼유저 추가) -> python manage.py createsuperuser
+
+>
 
 > (models.py 를 수정하면 마이그레이션을 해야함, 왜냐하면 파이썬 코드에 있는 모델 구조와 데이터 베이스의 구조를 동기화 해야하기 때문)
 
