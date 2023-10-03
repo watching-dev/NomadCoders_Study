@@ -4,6 +4,22 @@
 
 ***
 
+> 깃에서 새로 받아서 다시 할때는 poetry.lock, pyproject.toml 삭제 후 
+
+>> poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
+
+>>> poetry add django -> (장고 설치)
+
+>>>> (가상환경에 들어가서 장고 시작) -> poetry shell
+
+>>>>> (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
+
+>>>>>> (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
+
+>>>>>>> 이 순서로 해야 정상 작동함(물론 기존 파일과 다른점 있는지는 확인 해야함) / 데이터 베이스는 깃에 없으니 다시 슈퍼유저 만들어야 하는거고!
+
+***
+
 `필요한 정보들 작성`
 
 > https://python-poetry.org/ 에서 가상환경인 poetry 설치 -->> (하지만 안됨.. // zsh: command not found: poetry // 인텔맥이라 안되나?)
