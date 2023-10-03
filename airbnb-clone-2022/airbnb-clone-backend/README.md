@@ -1,75 +1,84 @@
 # airbnb-clone-backend
+
 23.09.16 시작  
 (이전 리포지토리 꼬여서 삭제 후 복원)
 
-***
+---
 
-> 깃에서 새로 받아서 다시 할때는 poetry.lock, pyproject.toml 삭제 후 
+> 깃에서 새로 받아서 다시 할때는 poetry.lock, pyproject.toml 삭제 후
 
->> poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
+> > poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
 
->>> poetry add django -> (장고 설치)
+> > > poetry add django -> (장고 설치)
 
->>>> (가상환경에 들어가서 장고 시작) -> poetry shell
+> > > > (가상환경에 들어가서 장고 시작) -> poetry shell
 
->>>>> (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
+> > > > > (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션\_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
 
->>>>>> (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
+> > > > > > (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
 
->>>>>>> 이 순서로 해야 정상 작동함(물론 기존 파일과 다른점 있는지는 확인 해야함) / 데이터 베이스는 깃에 없으니 다시 슈퍼유저 만들어야 하는거고!
+> > > > > > > 이 순서로 해야 정상 작동함(물론 기존 파일과 다른점 있는지는 확인 해야함) / 데이터 베이스는 깃에 없으니 다시 슈퍼유저 만들어야 하는거고!
 
-***
+---
 
 `필요한 정보들 작성`
 
-> https://python-poetry.org/ 에서 가상환경인 poetry 설치 -->> (하지만 안됨.. // zsh: command not found: poetry // 인텔맥이라 안되나?)
+> ~~https://python-poetry.org/ 에서 가상환경인 poetry 설치 -->> (하지만 안됨.. // zsh: command not found: poetry // 인텔맥이라 안되나?)~~
 
->> 프로젝트 폴더로 들어와서 터미널에 brew install poetry 로 설치
+> > 프로젝트 폴더로 들어와서 터미널에 brew install poetry 로 설치
 
->>> poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
+> > > poetry init -> enter x4 -> 라이센스는 MIT -> enter -> no x2 -> 마지막은 yes
 
->>>> poetry add django -> (장고 설치)
+> > > > poetry add django -> (장고 설치)
 
->>>>> (가상환경에 들어가서 장고 시작) -> poetry shell
+> > > > > (가상환경에 들어가서 장고 시작) -> poetry shell
 
->>>>>> django-admin -> (으로 장고 시작)
+> > > > > > django-admin -> (으로 장고 시작)
 
->>>>>>> (가상환경 나가려면) -> exit
+> > > > > > > (가상환경 나가려면) -> exit
 
->>>>>>>> (장고 프로젝트 생성) -> django-admin startproject config . -> (현재 폴더에 장고 프로젝트 생성 / 마지막에 .(점) 있는것 확인!!)
+> > > > > > > > (장고 프로젝트 생성) -> django-admin startproject config . -> (현재 폴더에 장고 프로젝트 생성 / 마지막에 .(점) 있는것 확인!!)
 
-***
+---
 
 > (서버 시작 - poetry shell 로 가상환경에서 시작해야함) -> python manage.py runserver
 
->> (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
+> > (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션\_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate
 
->>> (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
+> > > (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
 
-***
+---
 
-> (애플리케이션 시작_houses 이름의 앱 시작) -> python manage.py startapp houses
+> (애플리케이션 시작\_houses 이름의 앱 시작) -> python manage.py startapp houses
 
->> (모델 설정 후 앱에 모델 등록) -> config -> settings.py -> INSTALLED_APPS -> 모델명.apps.모델명Config 입력 후 저장하면 인식 됨
+> > (모델 설정 후 앱에 모델 등록) -> config -> settings.py -> INSTALLED_APPS -> 모델명.apps.모델명Config 입력 후 저장하면 인식 됨
 
->>> (admin에 모델을 연동하면 마이그레이션이 필요함) -> python manage.py makemigrations
+> > > (admin에 모델을 연동하면 마이그레이션이 필요함) -> python manage.py makemigrations
 
->>>> (마이그레이션_이전에도 했었음) python manage.py migrate
+> > > > (마이그레이션\_이전에도 했었음) python manage.py migrate
 
-***
+---
 
 > (비주얼 스튜디오 코드 extension) -> pylance 설치 (장고 자동으로 찾아줌)
 
->> (비주얼 스튜디오 코드 장고 에러 뜨는건 우하단에 Python 옆 버전 누르면 선택된 인터프리터 열리는데) -> poetry 환경 보일텐데 눌러서 연결 -> 에러 사라짐
+> > (비주얼 스튜디오 코드 장고 에러 뜨는건 우하단에 Python 옆 버전 누르면 선택된 인터프리터 열리는데) -> poetry 환경 보일텐데 눌러서 연결 -> 에러 사라짐
 
->>> (파이썬 자동 수정해주는 extension) Black formatter 라고 있는데, deprecated 됐다는 말이 있던데.., 우선 자동으로 설치 안내는 없었고 -> 검색하니까 뜨네(ms 꺼) -> 일단 설치해봄
+> > > (파이썬 자동 수정해주는 extension) Black formatter 라고 있는데, deprecated 됐다는 말이 있던데.., 우선 자동으로 설치 안내는 없었고 -> 검색하니까 뜨네(ms 꺼) -> 일단 설치해봄
 
-***
+---
 
 > (장고의 user를 상속받는 우리만의 user 생성) -> python manage.py startapp users
 
->> (기존 계정을 만들었으면 데이터베이스, 마이그레이션 삭제 후) -> python manage.py makemigrations
+> > (기존 계정을 만들었으면 데이터베이스, 마이그레이션 삭제 후) -> python manage.py makemigrations
 
->> (기존에 수정한 모델들이 다시 만들어지면) -> python manage.py migrate
+> > (기존에 수정한 모델들이 다시 만들어지면) -> python manage.py migrate
 
->>> (데이터가 날라갔으니 이제 다시 슈퍼유저 추가) -> python manage.py createsuperuser
+> > > (데이터가 날라갔으니 이제 다시 슈퍼유저 추가) -> python manage.py createsuperuser
+
+> (models.py 를 수정하면 마이그레이션을 해야함, 왜냐하면 파이썬 코드에 있는 모델 구조와 데이터 베이스의 구조를 동기화 해야하기 때문)
+
+> > python manage.py makemigrations -> python manage.py migrate
+
+> > > (default 값이 필요한 데이터 베이스가 있으면*기존에 사용자 데이터가 등록되어 있는데 새로운 column을 추가 하는 경우 처럼* 마이그레이션할때 에러를 보일것임, 해결: 1. 기존 값에 null을 넣을것이냐*boolean은 불가능 하니 null=True 처럼* 2. 코드 상에서 default 값을 지정해 줄것이냐\_default=False)
+
+> > > > (fieldsets 는 tuple 로 되어 있어야 함)
