@@ -86,3 +86,7 @@
 > > > (default 값이 필요한 데이터 베이스가 있으면*기존에 사용자 데이터가 등록되어 있는데 새로운 column을 추가 하는 경우 처럼* 마이그레이션할때 에러를 보일것임, 해결: 1. 기존 값에 null을 넣을것이냐*boolean은 불가능 하니 null=True 처럼* 2. 코드 상에서 default 값을 지정해 줄것이냐\_default=False)
 
 > > > > (fieldsets 는 tuple 로 되어 있어야 함)
+
+> +++
+
+> (image를 가져오기 위해서 pillow 설치) -> poetry add pillow
