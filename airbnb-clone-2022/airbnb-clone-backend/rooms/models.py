@@ -1,8 +1,9 @@
 from django.db import models
+from common.models import CommonModel
 
 
 # Create your models here.
-class Room(models.Model):
+class Room(CommonModel):
 
     """Room Model Definition"""
 
@@ -36,6 +37,9 @@ class Room(models.Model):
     owner = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
+    )
+    amenities = models.ManyToManyField(
+        "rooms.Amenity",
     )
 
 
