@@ -38,14 +38,15 @@ class Room(models.Model):
         on_delete=models.CASCADE,
     )
 
-    class Amenity(models.Model):
 
-        """Amenity Definition"""
+class Amenity(models.Model):
 
-        name = models.CharField(
-            max_length=150,
-        )
-        description = models.CharField(
-            max_length=150,
-            null=True,
-        )
+    """Amenity Definition"""
+
+    name = models.CharField(
+        max_length=150,
+    )
+    description = models.CharField(
+        max_length=150,
+        null=True,
+    )
