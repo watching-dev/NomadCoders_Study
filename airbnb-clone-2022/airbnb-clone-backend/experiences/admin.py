@@ -13,6 +13,8 @@ class ExperienceAdmin(admin.ModelAdmin):
         "created_at",
     )
 
+    list_filter = ("category",)
+
 
 @admin.register(perk)
 class PerkAdmin(admin.ModelAdmin):
