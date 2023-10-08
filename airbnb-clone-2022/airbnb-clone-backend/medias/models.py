@@ -13,12 +13,14 @@ class Photo(CommonModel):
         on_delete=models.CASCADE,
         null=True,
         blank=True,
+        related_name="photos",
     )
     experience = models.ForeignKey(
         "experiences.Experience",
         on_delete=models.CASCADE,
         null=True,
         blank=True,
+        related_name="photos",
     )
 
     def __str__(self) -> str:
@@ -31,5 +33,6 @@ class Video(CommonModel):
         "experiences.Experience",
         on_delete=models.CASCADE,
     )
+
     def __str__(self) -> str:
         return "Video File"
