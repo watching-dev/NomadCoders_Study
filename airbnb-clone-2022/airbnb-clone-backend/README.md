@@ -13,7 +13,7 @@
 
 > > > > (가상환경에 들어가서 장고 시작) -> poetry shell
 
-> > > > > (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate -> (만약 안된다면 마이그레이션, 디비 다 삭제하고) -> python manage.py makemigrations -> python manage.py migrate
+> > > > > (에러가 나고 admin 페이지에 접속 안될텐데 마이그레이션\_db의 state 변경 해야해서 그럼) -> control + c 로 서버 끄고 -> python manage.py migrate -> (만약 안된다면 마이그레이션, 디비 다 삭제하고) -> python manage.py makemigrations -> python manage.py migrate
 
 > > > > > > (admin 페이지 로그인 하려면 슈퍼 유저 만들어야함) -> python manage.py createsuperuser -> user name, email 그냥 엔터x2 -> 비밀번호는 그냥 123456 -> y
 
@@ -92,3 +92,7 @@
 > +++
 
 > (image를 가져오기 위해서 pillow 설치) -> poetry add pillow
+
+> +++
+
+> (파이썬 코드로 데이터 베이스 다이렉트로 컨트롤) -> python manage.py shell -> (개발 하는것처럼 작성) -> from rooms.models import Room -> enter -> Room.Objects.all() -> (방 데이터 출력함)
