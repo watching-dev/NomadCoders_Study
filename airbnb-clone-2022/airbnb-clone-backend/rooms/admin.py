@@ -9,9 +9,10 @@ class RoomAdmin(admin.ModelAdmin):
         "name",
         "price",
         "kind",
+        "total_amenities",
+        "total_amenities_admin",
         "owner",
         "created_at",
-        "updated_at",
     )
 
     list_filter = (
@@ -26,6 +27,9 @@ class RoomAdmin(admin.ModelAdmin):
         "created_at",
         "updated_at",
     )
+
+    def total_amenities_admin(self, room):
+        return room.amenities.count()
 
 
 @admin.register(Amenity)
