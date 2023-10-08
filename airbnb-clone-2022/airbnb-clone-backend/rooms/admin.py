@@ -11,6 +11,7 @@ class RoomAdmin(admin.ModelAdmin):
         "kind",
         "total_amenities",
         "total_amenities_admin",
+        "rating",
         "owner",
         "created_at",
     )
