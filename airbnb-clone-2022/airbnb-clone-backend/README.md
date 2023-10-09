@@ -21,6 +21,8 @@
 
 > > > > > > > > (image를 가져오기 위해서 pillow 설치) -> poetry add pillow
 
+> > > > > > > > > (장고 레스트 프레임워크 사용) -> poetry add djangorestframework
+
 ---
 
 `필요한 정보들 작성`
@@ -96,3 +98,7 @@
 > +++
 
 > (파이썬 코드로 데이터 베이스 다이렉트로 컨트롤) -> python manage.py shell -> (개발 하는것처럼 작성) -> from rooms.models import Room -> enter -> Room.Objects.all() -> (방 데이터 출력함)
+
+> +++
+
+> (장고 레스트 프레임워크 사용) -> poetry add djangorestframework
