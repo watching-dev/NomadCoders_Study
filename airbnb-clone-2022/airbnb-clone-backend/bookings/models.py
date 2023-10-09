@@ -7,13 +7,13 @@ class Booking(CommonModel):
 
     """Booking Model Definition"""
 
-    class BookingKineChoices(models.TextChoices):
+    class BookingKindChoices(models.TextChoices):
         ROOM = "room", "Room"
         EXPERIENCE = "experience", "Experience"
 
     kind = models.CharField(
         max_length=15,
-        choices=BookingKineChoices.choices,
+        choices=BookingKindChoices.choices,
     )
     user = models.ForeignKey(
         "users.User",

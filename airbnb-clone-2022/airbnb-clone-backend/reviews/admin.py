@@ -19,7 +19,7 @@ class WordFilter(admin.SimpleListFilter):
         if word:
             return reviews.filter(payload__contains=word)
         else:
-            return reviews
+            reviews
 
 
 @admin.register(Review)
