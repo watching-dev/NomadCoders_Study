@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "variables.css";
 @import "status-bar.css";
 
 body {
@@ -26,4 +27,31 @@ body {
 
     width: 60%;
     opacity: 0.7;
+}
+
+#login-form {
+
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+
+#login-form input {
+
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+
+    border-color: var(--yellow);
 }
