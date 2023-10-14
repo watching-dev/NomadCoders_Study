@@ -4,14 +4,22 @@ from .models import Category
 from .serializer import CategorySerializer
 
 
-@api_view()
+@api_view(["GET", "POST"])
 # Create your views here.
 def categories(request):
-    all_categories = Category.objects.all()
-    serializer = CategorySerializer(all_categories, many=True)
-    return Response(
-        {
-            "ok": True,
-            "categories": serializer.data,
-        },
-    )
+    if request.method == "GET":
+        all_categories = Category.objects.all()
+        serializer = CategorySerializer(all_categories, many=True)
+        return Response(
+            serializer.data,
+        )
+    elif request.method == "POST":
+        return Response({"created": True})
+
+
+@api_view()
+def category(request, pk):
+    category = Category.objects.get(pk=pk)
+    serializer = CategorySerializer(category)
+
+    return Response(serializer.data)
