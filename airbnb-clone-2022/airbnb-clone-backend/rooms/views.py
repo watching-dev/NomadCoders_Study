@@ -1,5 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
+from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Amenity
 from .serializers import AmenitySerializer
 
@@ -26,47 +28,42 @@ class Amenities(APIView):
 
 
 class AmenityDetail(APIView):
+    def get_objects(self, pk):
+        try:
+            return Amenity.objects.get(pk=pk)
+        except Amenity.DoesNotExist:
+            raise NotFound
+
     def get(self, request, pk):
-        pass
+        amenity = self.get_objects(pk)
+        serializer = AmenitySerializer(amenity)
+
+        return Response(serializer.data)
+
+        """ return Response(
+            AmenitySerializer(
+                self.get_objects(pk),
+            ).data,
+        ) """
 
     def put(self, request, pk):
-        pass
+        amenity = self.get_objects(pk)
+        serializer = AmenitySerializer(
+            amenity,
+            data=request.data,
+            partial=True,
+        )
+
+        if serializer.is_valid():
+            updated_amenity = serializer.save()
+            return Response(
+                AmenitySerializer(updated_amenity).data,
+            )
+
+        else:
+            return Response(serializer.errors)
 
     def delete(self, request, pk):
-        pass
-
-
-""" from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Room
-
-
-# Create your views here.
-def see_all_rooms(request):
-    rooms = Room.objects.all()
-    return render(
-        request,
-        "all_rooms.html",
-        {
-            "rooms": rooms,
-            "title": "Hello! thie title comes from django!",
-        },
-    )
-
-
-def see_one_room(request, room_pk):
-    try:
-        room = Room.objects.get(pk=room_pk)
-        return render(
-            request,
-            "room_detail.html",
-            {
-                "room": room,
-            },
-        )
-    except Room.DoesNotExist:
-        return render(
-            request,
-            "room.detail.html",
-            {"not_found": True},
-        ) """
+        amenity = self.get_objects(pk)
+        amenity.delete()
+        return Response(status=HTTP_204_NO_CONTENT)
