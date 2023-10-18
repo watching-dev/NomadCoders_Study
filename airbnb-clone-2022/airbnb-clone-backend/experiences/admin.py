@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Experience, perk
+from .models import Experience, Perk
 
 
 # Register your models here.
@@ -16,7 +16,7 @@ class ExperienceAdmin(admin.ModelAdmin):
     list_filter = ("category",)
 
 
-@admin.register(perk)
+@admin.register(Perk)
 class PerkAdmin(admin.ModelAdmin):
     list_display = (
         "name",

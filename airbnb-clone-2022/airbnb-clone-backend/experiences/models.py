@@ -43,7 +43,7 @@ class Experience(CommonModel):
         return self.name
 
 
-class perk(CommonModel):
+class Perk(CommonModel):
 
     """What is included on an Experience"""
 
