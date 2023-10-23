@@ -1,7 +1,8 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SerializerMethodField
 from rest_framework import serializers
 from .models import Amenity, Room
 from users.serializer import TinyUserSerializer
+from reviews.serializers import ReviewSerializer
 from categories.serializer import CategorySerializer
 
 
@@ -43,7 +44,11 @@ class RoomDetailSerializer(ModelSerializer):
 
 class RoomListSerializer(ModelSerializer):
     rating = serializers.SerializerMethodField()
-    is_owner = serializers.SerializerMethodField()
+    is_owner = SerializerMethodField()
+    reviews = ReviewSerializer(
+        many=True,
+        read_only=True,
+    )
 
     class Meta:
         model = Room
@@ -55,6 +60,7 @@ class RoomListSerializer(ModelSerializer):
             "price",
             "rating",
             "is_owner",
+            "reviews",
         )
 
     def get_rating(self, room):
