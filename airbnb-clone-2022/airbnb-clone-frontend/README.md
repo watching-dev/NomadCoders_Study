@@ -31,3 +31,5 @@
 > > > > react-router-dom 설치
 
 > > > > > npm i react-router-dom
+
+> > > > > > npm run start
