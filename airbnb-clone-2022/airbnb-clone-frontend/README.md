@@ -8,6 +8,11 @@
 
 ---
 
+> +++
+
+> 필요 사이트
+> https://chakra-ui.com/getting-started > https://velog.io/@j1min/Vscode-Prettier-%EC%A0%81%EC%9A%A9-%EC%95%88%EB%90%A8-%EA%B3%A0%EC%B9%98%EB%8A%94%EB%B2%95 > https://react-icons.github.io/react-icons
+
 `필요한 정보들 작성`
 
 > +++
