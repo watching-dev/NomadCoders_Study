@@ -1,10 +1,11 @@
+import { Box, HStack } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 
 export default function Root() {
-    return  (
-        <h1>
-        im root
-        <Outlet />
-    </h1>
-    );
+  return (
+    <Box>
+      <HStack></HStack>
+      <Outlet />
+    </Box>
+  );
 }

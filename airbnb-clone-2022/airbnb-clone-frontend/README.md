@@ -33,3 +33,9 @@
 > > > > > npm i react-router-dom
 
 > > > > > > npm run start
+
+> +++
+
+> 아이콘 설치
+
+> > npm install react-icons --save
