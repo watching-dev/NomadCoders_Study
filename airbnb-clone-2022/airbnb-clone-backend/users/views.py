@@ -117,6 +117,7 @@ class JWTLogIn(APIView):
             usernmame=username,
             password=password,
         )
+        print(authenticate)
         if user:
             token = jwt.encode(
                 {"pk": user.pk},
