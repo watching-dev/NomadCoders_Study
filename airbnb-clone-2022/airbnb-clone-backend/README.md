@@ -102,3 +102,15 @@
 > +++
 
 > (장고 레스트 프레임워크 사용) -> poetry add djangorestframework
+
+> +++
+
+> PostMan 사용 방법
+
+> 토큰 생성
+
+> > post / http://127.0.0.1:8000/api/v1/users/token-login -> Body에 -> raw 선택 -> Json 선택 -> {"username":"admin", "password":"123"} 입력 -> Send -> Token 생성을 결과로 볼 수 있음 -> 복사
+
+> 토큰으로 프로필 보기
+
+> > get / http://127.0.0.1:8000/api/v1/users/me -> Header에 -> key 에 -> Authorization 입력 -> value 에 -> Token 입력하고 한칸 띄우고 위에서 복사한 토큰 붙여넣기 -> Token 989c365928277ec17367cfad1d2896ace95a09d2 -> Send -> 내 프로필을 결과로 볼 수 있음
