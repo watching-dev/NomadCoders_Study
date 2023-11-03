@@ -114,3 +114,9 @@
 > 토큰으로 프로필 보기
 
 > > get / http://127.0.0.1:8000/api/v1/users/me -> Header에 -> key 에 -> Authorization 입력 -> value 에 -> Token 입력하고 한칸 띄우고 위에서 복사한 토큰 붙여넣기 -> Token 989c365928277ec17367cfad1d2896ace95a09d2 -> Send -> 내 프로필을 결과로 볼 수 있음
+
+> +++
+
+> pyjwt 설치
+
+> poetry add pyjwt
