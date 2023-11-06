@@ -134,3 +134,27 @@
 > django-environ 설치
 
 > poetry add django-environ
+
+> +++
+
+> JWT 사용하려면 수동으로 구현보다는 Simple JWT, 토큰 인증을 사용하고 싶으면 django-rest-knox 추천
+
+> +++
+
+> .env에 SECRET_KEY 저장하고 config -> settings에서 SECRET_KEY = env("SECRET_KEY") 하면
+
+> > runserver 튕기고 에러 뜸
+
+> > 이럴때 .env 파일에서 SECRET_KEY="key" 처럼 = 사이에 스페이스가 없어야함
+
+> > > 수정하고 다시 runserver 하면 정상 작동
+
+> +++
+
+> test 방법
+
+> 기존 제공하는 테스트 보다 rest_framework 에서 제공하는 테스트 사용
+
+> 함수 이름은 반드시 test 로 시작해야 테스트 가능
+
+> python manage.py test
