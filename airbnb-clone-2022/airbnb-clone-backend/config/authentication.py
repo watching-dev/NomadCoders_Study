@@ -22,9 +22,17 @@ class JWTAuthentication(BaseAuthentication):
         token = request.headers.get("Jwt")
         if not token:
             return None
-        jwt.decode(
+        decoded = jwt.decode(
             token,
             settings.SECRET_KEY,
             algorithms=["HS256"],
         )
+        pk = decoded.get("pk")
+        if not pk:
+            raise AuthenticationFailed("Invalid Token")
+        try:
+            user = User.objects.get(pk=pk)
+            return (user, None)
+        except User.DoesNotExist:
+            raise AuthenticationFailed("User Not Found")
         return None
