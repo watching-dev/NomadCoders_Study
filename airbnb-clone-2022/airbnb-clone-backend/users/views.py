@@ -114,7 +114,7 @@ class JWTLogIn(APIView):
             raise ParseError
         user = authenticate(
             request,
-            usernmame=username,
+            username=username,
             password=password,
         )
         print(authenticate)
