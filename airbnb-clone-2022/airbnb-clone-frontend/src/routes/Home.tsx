@@ -1,3 +1,56 @@
+import { FaStar } from "react-icons/fa";
+
+import {
+  Box,
+  Grid,
+  HStack,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+
 export default function Home() {
-    return <span>home text</span>
+  return (
+    // <Grid gap={10} templateColumns={"200px 200px 200px"}>
+    // <Grid gap={10} templateColumns={"repeat(5, 1fr)"}>
+    <Grid
+      mt={10}
+      px={40}
+      columnGap={4}
+      rowGap={8}
+      templateColumns={"repeat(5, 1fr)"}
+    >
+      <VStack spacing={1} alignItems={"flex-start"}>
+        <Box overflow={"hidden"} mb={3} rounded={"3xl"}>
+          <Image
+            h="280"
+            src="https://a0.muscache.com/im/pictures/e2bcb474-9938-47b0-a417-c4a02fd0532a.jpg?im_w=720"
+          />
+        </Box>
+        <Box>
+          <Grid gap={2} templateColumns={"6fr 1fr"}>
+            {/* <Heading noOfLines={1} fontSize={"md"}>
+              [RIWON 3F] 루프탑 바베큐가 가능한 신축의 한국식 퓨전 하우스
+              (녹사평역 도보7분)
+            </Heading> */}
+            <Text display={"block"} as="b" noOfLines={1} fontSize={"md"}>
+              [RIWON 3F] 루프탑 바베큐가 가능한 신축의 한국식 퓨전 하우스
+              (녹사평역 도보7분)
+            </Text>
+            <HStack spacing={1}>
+              <FaStar size={15} />
+              <Text>5.0</Text>
+            </HStack>
+          </Grid>
+        </Box>
+        <Text fontSize={"sm"} color={"gray.600"}>
+          Seoul, S. korea
+        </Text>
+        <Text fontSize={"sm"} color={"gray.600"}>
+          <Text as="b">$72</Text>/ night
+        </Text>
+      </VStack>
+    </Grid>
+  );
 }
