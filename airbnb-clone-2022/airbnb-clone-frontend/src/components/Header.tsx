@@ -40,7 +40,7 @@ export default function Header() {
         md: "row",
       }}
       spacing={{
-        sm: 3,
+        sm: 4,
         md: 0,
       }}
       borderBottomWidth={1}
