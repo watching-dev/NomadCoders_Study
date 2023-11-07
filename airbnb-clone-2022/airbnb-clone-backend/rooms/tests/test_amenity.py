@@ -1,5 +1,7 @@
 from rest_framework.test import APITestCase
-from . import models
+
+# from . import models
+from rooms import models
 from users.models import User
 
 
