@@ -4,7 +4,19 @@
 
 ---
 
->
+> 오랜만에 pull 받거나 뭔가 꼬여서 안된다 그러면 아래처럼 다시 해야함(순서 다시 수정)
+
+> (아직 확실치 않은데 진짜 안되면) package.json, package-lock.json 삭제 후(이래도 안되면 tsconfig.json 까지 삭제)
+
+> > (리액트 설치) -> npx create-react-app airbnb-clone-frontend --template=typescript
+
+> > > (chakra-ui 설치) -> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+> > > > (react-router-dom 설치) -> npm i react-router-dom
+
+> > > > > (아이콘 설치) -> npm install react-icons --save
+
+> > > > > > npm run start
 
 ---
 
@@ -32,6 +44,8 @@
 > +++
 
 > 리액트 초기 세팅(삭제할거 삭제)
+
+>
 
 > > chakra-ui 설치
 
