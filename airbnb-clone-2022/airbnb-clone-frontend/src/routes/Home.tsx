@@ -1,7 +1,8 @@
-import { FaStar } from "react-icons/fa";
+import { FaHeart, FaStar, FaRegHeart } from "react-icons/fa";
 
 import {
   Box,
+  Button,
   Grid,
   HStack,
   Heading,
@@ -22,11 +23,28 @@ export default function Home() {
       templateColumns={"repeat(5, 1fr)"}
     >
       <VStack spacing={1} alignItems={"flex-start"}>
-        <Box overflow={"hidden"} mb={3} rounded={"3xl"}>
+        <Box position={"relative"} overflow={"hidden"} mb={3} rounded={"2xl"}>
           <Image
             h="280"
             src="https://a0.muscache.com/im/pictures/e2bcb474-9938-47b0-a417-c4a02fd0532a.jpg?im_w=720"
           />
+          {/* <Box
+            cursor={"pointer"}
+            position={"absolute"}
+            top={5}
+            right={5}
+            color={"white"}
+          > */}
+          <Button
+            variant={"unstyled"}
+            position={"absolute"}
+            top={0}
+            right={0}
+            color={"white"}
+          >
+            {/* <FaHeart size={"20px"} /> */}
+            <FaRegHeart size={"20px"} />
+          </Button>
         </Box>
         <Box>
           <Grid gap={2} templateColumns={"6fr 1fr"}>
