@@ -62,3 +62,11 @@
 > 아이콘 설치
 
 > > npm install react-icons --save
+
+> +++
+
+> Not Found 또는 file 어쩌고 런타임 에러 뜨는 분들은
+
+> > http://127.0.0.1:8000/admin 에서 로그인, photos -> photo 추가 누른다음
+
+> > > File 에 airbnb 이미지 주소넣고 잊지말고!! Room 선택!!

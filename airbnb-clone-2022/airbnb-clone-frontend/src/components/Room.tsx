@@ -10,15 +10,28 @@ import {
 } from "@chakra-ui/react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
 
-export default function Room() {
+interface IRoomProps {
+  imageUrl: string;
+  name: string;
+  rating: number;
+  city: string;
+  country: string;
+  price: number;
+}
+
+export default function Room({
+  imageUrl,
+  name,
+  rating,
+  city,
+  country,
+  price,
+}: IRoomProps) {
   const gray = useColorModeValue("gray.600", "gray.300");
   return (
     <VStack spacing={1} alignItems={"flex-start"}>
       <Box position={"relative"} overflow={"hidden"} mb={3} rounded={"2xl"}>
-        <Image
-          minH="280"
-          src="https://a0.muscache.com/im/pictures/e2bcb474-9938-47b0-a417-c4a02fd0532a.jpg?im_w=720"
-        />
+        <Image minH="280" src={imageUrl} />
         {/* <Box
       cursor={"pointer"}
       position={"absolute"}
@@ -44,8 +57,7 @@ export default function Room() {
         (녹사평역 도보7분)
       </Heading> */}
           <Text display={"block"} as="b" noOfLines={1} fontSize={"md"}>
-            [RIWON 3F] 루프탑 바베큐가 가능한 신축의 한국식 퓨전 하우스
-            (녹사평역 도보7분)
+            {name}
           </Text>
           <HStack
             _hover={{
@@ -55,15 +67,15 @@ export default function Room() {
             alignItems={"center"}
           >
             <FaStar size={12} />
-            <Text fontSize={"sm"}>5.0</Text>
+            <Text fontSize={"sm"}>{rating}</Text>
           </HStack>
         </Grid>
       </Box>
       <Text fontSize={"sm"} color={gray}>
-        Seoul, S. korea
+        {city}, {country}
       </Text>
       <Text fontSize={"sm"} color={gray}>
-        <Text as="b">$72</Text>/ night
+        <Text as="b">${price}</Text>/ night
       </Text>
     </VStack>
   );
