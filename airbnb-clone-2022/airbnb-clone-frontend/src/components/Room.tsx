@@ -47,9 +47,15 @@ export default function Room() {
             [RIWON 3F] 루프탑 바베큐가 가능한 신축의 한국식 퓨전 하우스
             (녹사평역 도보7분)
           </Text>
-          <HStack spacing={1}>
-            <FaStar size={15} />
-            <Text>5.0</Text>
+          <HStack
+            _hover={{
+              color: "red.100",
+            }}
+            spacing={1}
+            alignItems={"center"}
+          >
+            <FaStar size={12} />
+            <Text fontSize={"sm"}>5.0</Text>
           </HStack>
         </Grid>
       </Box>
