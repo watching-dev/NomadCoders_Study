@@ -16,6 +16,8 @@ import {
 import Room from "../components/Room";
 import RoomSkeleton from "../components/RoomSkeleton";
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getRooms } from "../api";
 
 interface IPhoto {
   pk: string;
@@ -35,17 +37,7 @@ interface IRoom {
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [rooms, setRooms] = useState<IRoom[]>([]);
-  const fetchRooms = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/v1/rooms/");
-    const json = await response.json();
-    setRooms(json);
-    setIsLoading(false);
-  };
-  useEffect(() => {
-    fetchRooms();
-  });
+  const { isLoading, data } = useQuery<IRoom[]>(["rooms"], getRooms);
   return (
     // <Grid gap={10} templateColumns={"200px 200px 200px"}>
     // <Grid gap={10} templateColumns={"repeat(5, 1fr)"}>
@@ -108,7 +100,7 @@ export default function Home() {
             <RoomSkeleton />
           </>
         ) : null}
-        {rooms.map((room) => (
+        {data?.map((room) => (
           <Room
             imageUrl={
               room.photos[0].file

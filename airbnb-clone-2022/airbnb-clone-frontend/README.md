@@ -16,7 +16,17 @@
 
 > > > > > (아이콘 설치) -> npm install react-icons --save
 
-> > > > > > npm run start
+> > > > > > (react query 설치) -> npm i @tanstack/react-query
+
+> > > > > > (["rooms"], getRooms) 에러 나오면 4버전 설치 필요
+
+> > > > > > (패키지 설치 정보 / 버전 보기) -> npm ls
+
+> > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+
+> > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+
+> > > > > > > npm run start
 
 ---
 
@@ -70,3 +80,25 @@
 > > http://127.0.0.1:8000/admin 에서 로그인, photos -> photo 추가 누른다음
 
 > > > File 에 airbnb 이미지 주소넣고 잊지말고!! Room 선택!!
+
+> +++
+
+> Tanstack Query(react query) 설치
+
+> > npm i @tanstack/react-query
+
+> +++
+
+> (["rooms"], getRooms) 에러 해결 방법
+
+> 문제는 @tanstack/react-query 버전이 v5 라서 그런거
+
+> 현재 (23.11.09) 에러 해결 안돼서 댓글에 되어 있는것 처럼 v4 설치 - 지금 최신 버전은 어제 published 된 latest:5.8.1 임
+
+> > (패키지 설치 정보 / 버전 보기) -> npm ls
+
+> > > (패키지 정보보기) -> npm view @tanstack/react-query 또는 npm show @tanstack/react-query
+
+> > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+
+> > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
