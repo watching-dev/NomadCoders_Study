@@ -13,3 +13,6 @@ export const getRooms = () =>
 
 //   return response.data;
 // }
+
+export const getRoom = () =>
+  axiosInstance.get(`rooms/11`).then((response) => response.data);

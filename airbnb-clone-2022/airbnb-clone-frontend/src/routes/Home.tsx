@@ -103,6 +103,8 @@ export default function Home() {
         ) : null}
         {data?.map((room) => (
           <Room
+            key={room.pk}
+            pk={room.pk}
             imageUrl={
               room.photos[0].file
               // Not Found 또는 file 어쩌고 런타임 에러 뜨는 분들은
