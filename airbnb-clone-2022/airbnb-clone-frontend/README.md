@@ -18,7 +18,7 @@
 
 > > > > > > (axios 설치) -> npm i axios
 
-> > > > > > > (react query 설치) -> npm i @tanstack/react-query
+> > > > > > > (react query 설치) -> npm i @tanstack/react-query -> 아래 5.8.2 먼저 설치
 
 > > > > > > > (["rooms"], getRooms) 에러 나오면 4버전 설치 필요
 
@@ -26,9 +26,15 @@
 
 > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
 
-> > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+> > > > > > > > (Tanstack Devtools v4버전에서 설치 불가) -> npm i @tanstack/react-query@^5.8.2 버전 설치 필요
 
-> > > > > > > > npm run start
+> > > > > > > > (Tanstack Devtools 설치) -> npm i @tanstack/react-query-devtools
+
+> > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+
+> > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+
+> > > > > > > > > > npm run start
 
 ---
 
@@ -110,3 +116,15 @@
 > axios 설치(fetch 도와줌)
 
 > > npm i axios
+
+> +++
+
+> Tanstack Devtools 설치(쿼리 시각화)
+
+> > npm i @tanstack/react-query-devtools
+
+> > > (Tanstack Devtools 4버전에서 설치 불가) -> npm i @tanstack/react-query@^5.8.2 버전 설치 필요
+
+> > > > react-query 삭제하고 Tanstack Devtools 설치한다음 다시 react-query 삭제하고 4버전 설치
+
+> > > > > 이렇게 안하면 에러
