@@ -1,8 +1,15 @@
-const BASE_URL = "http://127.0.0.1:8000/api/v1";
+import axios from "axios";
 
-export async function getRooms() {
-  const response = await fetch(`${BASE_URL}/rooms/`);
-  const json = await response.json();
+const axiosInstance = axios.create({
+  baseURL: "http://127.0.0.1:8000/api/v1/",
+});
 
-  return json;
-}
+export const getRooms = () =>
+  axiosInstance.get("rooms/").then((response) => response.data);
+
+// export async function getRooms() {
+//   // const response = await axios.get(`${BASE_URL}/rooms/`);
+//   const response = await axiosInstance.get(`rooms/`);
+
+//   return response.data;
+// }

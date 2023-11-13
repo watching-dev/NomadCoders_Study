@@ -16,17 +16,19 @@
 
 > > > > > (아이콘 설치) -> npm install react-icons --save
 
-> > > > > > (react query 설치) -> npm i @tanstack/react-query
+> > > > > > (axios 설치) -> npm i axios
 
-> > > > > > (["rooms"], getRooms) 에러 나오면 4버전 설치 필요
+> > > > > > > (react query 설치) -> npm i @tanstack/react-query
 
-> > > > > > (패키지 설치 정보 / 버전 보기) -> npm ls
+> > > > > > > (["rooms"], getRooms) 에러 나오면 4버전 설치 필요
 
-> > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+> > > > > > > (패키지 설치 정보 / 버전 보기) -> npm ls
 
-> > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+> > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
 
-> > > > > > > npm run start
+> > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+
+> > > > > > > > npm run start
 
 ---
 
@@ -102,3 +104,9 @@
 > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
 
 > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+
+> +++
+
+> axios 설치(fetch 도와줌)
+
+> > npm i axios

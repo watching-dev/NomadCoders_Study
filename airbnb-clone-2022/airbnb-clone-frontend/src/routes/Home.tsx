@@ -18,6 +18,7 @@ import RoomSkeleton from "../components/RoomSkeleton";
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getRooms } from "../api";
+import { Link } from "react-router-dom";
 
 interface IPhoto {
   pk: string;
