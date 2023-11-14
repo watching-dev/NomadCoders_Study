@@ -6,9 +6,9 @@
 
 > 오랜만에 pull 받거나 뭔가 꼬여서 안된다 그러면 아래처럼 다시 해야함(순서 다시 수정)
 
-> (아직 확실치 않은데 진짜 안되면) package.json, package-lock.json 삭제 후(이래도 안되면 tsconfig.json 까지 삭제)
+> package.json, package-lock.json, node_modules 폴더 삭제 후(이래도 안되면 tsconfig.json 까지 삭제)
 
-> > (리액트 설치) -> npx create-react-app airbnb-clone-frontend --template=typescript
+> > 이건 아닌듯 ~~(리액트 설치) -> npx create-react-app airbnb-clone-frontend --template=typescript~~
 
 > > > (chakra-ui 설치) -> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
@@ -26,15 +26,44 @@
 
 > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
 
-> > > > > > > > (Tanstack Devtools v4버전에서 설치 불가) -> npm i @tanstack/react-query@^5.8.2 버전 설치 필요
+> > > > > > > > (Tanstack Devtools v4버전에서 설치 불가 5.8.2 버전 설치 필요) -> npm i @tanstack/react-query@^5.8.2
 
-> > > > > > > > (Tanstack Devtools 설치) -> npm i @tanstack/react-query-devtools
+> > > > > > > > > (Tanstack Devtools 설치) -> npm i @tanstack/react-query-devtools
 
-> > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+> > > > > > > > > > (react-scripts 설치) -> npm i -save react-scripts
+> > > > > > > > > > 아래는 무시함, 할 필요 없음 해도 똑같은거 계속 반복됨
+> > > > > > > > > > 8 vulnerabilities (2 moderate, 6 high)
+> > > > > > > > > > To address all issues, run:
+> > > > > > > > > > npm audit fix
 
-> > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+> > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react
 
-> > > > > > > > > > npm run start
+> > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react-dom
+
+> > > > > > > > > > > package.json에서 dependencies 뒤에 아래 추가하고 저장
+
+,
+"scripts": {
+"start": "react-scripts start"
+},
+"browserslist": {
+"production": [
+">0.2%",
+"not dead",
+"not op_mini all"
+],
+"development": [
+"last 1 chrome version",
+"last 1 firefox version",
+"last 1 safari version"
+]
+},
+
+> > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+
+> > > > > > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+
+> > > > > > > > > > > > > > npm run start
 
 ---
 
