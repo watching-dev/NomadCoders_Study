@@ -30,10 +30,10 @@
 
 > > > > > > > > > (Tanstack Devtools 설치) -> npm i @tanstack/react-query-devtools
 
-> > > > > > > > > > (react-scripts 설치) -> npm i -save react-scripts
-> > > > > > > > > > 아래는 무시함, 할 필요 없음 해도 똑같은거 계속 반복됨
-> > > > > > > > > > 8 vulnerabilities (2 moderate, 6 high)
-> > > > > > > > > > To address all issues, run:
+> > > > > > > > > > (react-scripts 설치) -> npm i -save react-scripts  
+> > > > > > > > > > 아래는 무시함, 할 필요 없음 해도 똑같은거 계속 반복됨  
+> > > > > > > > > > 8 vulnerabilities (2 moderate, 6 high)  
+> > > > > > > > > > To address all issues, run:  
 > > > > > > > > > > npm audit fix
 
 > > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react
@@ -42,21 +42,21 @@
 
 > > > > > > > > > > > package.json에서 dependencies 뒤에 아래 추가하고 저장
 
-,
-"scripts": {
-"start": "react-scripts start"
-},
-"browserslist": {
+,  
+"scripts": {  
+"start": "react-scripts start"  
+},  
+"browserslist": {  
 "production": [
 ">0.2%",
 "not dead",
 "not op_mini all"
-],
+],  
 "development": [
 "last 1 chrome version",
 "last 1 firefox version",
 "last 1 safari version"
-]
+]  
 },
 
 > > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
