@@ -19,26 +19,10 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getRooms } from "../api";
 import { Link } from "react-router-dom";
-
-interface IPhoto {
-  pk: string;
-  file: string;
-  description: string;
-}
-
-interface IRoom {
-  pk: number;
-  name: string;
-  country: string;
-  city: string;
-  price: number;
-  rating: number;
-  is_owner: boolean;
-  photos: IPhoto[];
-}
+import { IRoomList } from "../types";
 
 export default function Home() {
-  const { isLoading, data } = useQuery<IRoom[]>(["rooms"], getRooms);
+  const { isLoading, data } = useQuery<IRoomList[]>(["rooms"], getRooms);
   return (
     // <Grid gap={10} templateColumns={"200px 200px 200px"}>
     // <Grid gap={10} templateColumns={"repeat(5, 1fr)"}>
