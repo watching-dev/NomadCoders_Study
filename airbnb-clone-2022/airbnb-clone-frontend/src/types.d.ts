@@ -49,4 +49,5 @@ export interface IReview {
   name: string;
   rating: number;
   user: IRoomOwner;
+  payload: string;
 }
