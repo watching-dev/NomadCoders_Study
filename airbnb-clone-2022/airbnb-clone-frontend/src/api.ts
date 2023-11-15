@@ -30,3 +30,6 @@ export const getRoomReviews = ({ queryKey }: QueryFunctionContext) => {
 
 export const getMe = () =>
   axiosInstance.get(`users/me`).then((response) => response.data);
+
+export const logOut = () =>
+  axiosInstance.post(`users/log-out`).then((response) => response.data);
