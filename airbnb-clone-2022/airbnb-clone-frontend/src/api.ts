@@ -26,3 +26,6 @@ export const getRoomReviews = ({ queryKey }: QueryFunctionContext) => {
     .get(`rooms/${roomPk}/reviews`)
     .then((response) => response.data);
 };
+
+export const getMe = () =>
+  axiosInstance.get(`users/me`).then((response) => response.data);
