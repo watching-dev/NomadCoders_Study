@@ -34,13 +34,17 @@
 > > > > > > > > > > 아래는 무시함, 할 필요 없음 해도 똑같은거 계속 반복됨  
 > > > > > > > > > > 8 vulnerabilities (2 moderate, 6 high)  
 > > > > > > > > > > To address all issues, run:  
-> > > > > > > > > > npm audit fix
+> > > > > > > > > > npm audit fix / 또는 (npm audit fix --force) 근데 무시, 할 필요 없음 해도 똑같은거 계속 반복됨
 
-> > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react
+> > > > > > > > > > > (js-cookie 설치) -> npm i js-cookie
 
-> > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react-dom
+> > > > > > > > > > > (타입 관련 설치) -> npm i --save-dev @types/js-cookie
 
-> > > > > > > > > > > package.json에서 dependencies 뒤에 아래 추가하고 저장
+> > > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react
+
+> > > > > > > > > > > > (서버 시작하면 나오는 에러 수정 설치) -> npm i --save-dev @types/react-dom
+
+> > > > > > > > > > > > package.json에서 dependencies 뒤에 아래 추가하고 저장
 
 ,  
 "scripts": {  
@@ -59,11 +63,11 @@
 ]  
 },
 
-> > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+> > > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
 
-> > > > > > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+> > > > > > > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
 
-> > > > > > > > > > > > > > npm run start
+> > > > > > > > > > > > > > > > npm run start
 
 ---
 
@@ -157,3 +161,11 @@
 > > > > react-query 삭제하고 Tanstack Devtools 설치한다음 다시 react-query 삭제하고 4버전 설치
 
 > > > > > 이렇게 안하면 에러
+
+> +++
+
+> js cookie 설치
+
+> > npm i js-cookie
+
+> > > (타입 관련 설치) -> npm i --save-dev @types/js-cookie
