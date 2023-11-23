@@ -169,3 +169,25 @@
 > > npm i js-cookie
 
 > > > (타입 관련 설치) -> npm i --save-dev @types/js-cookie
+
+> +++ +++ +++
+
+> 깃허브 로그인 만들기
+
+> 요약 정리: 버튼 클릭 -> 깃허브 이동 -> 인증 -> 콜백으로 다시 돌아와서 -> 코드 장고에 전달 -> 장고와 깃허브 API 통신 -> 로그인
+
+> > github.com/settings/applications/new
+> > 깃허브 앱 만들기
+
+> > > 이름적고, url 적고(http://127.0.0.1:3000/)
+> > > 설명적고, 콜백 url 적고(http://127.0.0.1:3000/social/github)
+> > > Enable Device Flow 는 체크하지 말고 등록 버튼 클릭
+
+> > > > 깃허브 로그인 버튼에 URL(https://github.com/login/oauth/authorize) 적고
+> > > > 클라이언트 아이디 적고(위에서 깃허브 앱 만들면 나오는 아이디)
+> > > > https://github.com/login/oauth/authorize?client_id=5ce938e4337bbea704be
+> > > > 이렇게만 하면 public data만 가져올 수 있음
+> > > > 추가적인 데이터 가져오기 위해 &scope=read:user,user:email 추가
+> > > > https://github.com/login/oauth/authorize?client_id=5ce938e4337bbea704be&scope=read:user,user:email
+
+> +++ +++ +++
