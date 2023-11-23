@@ -176,7 +176,7 @@
 
 > 요약 정리: 버튼 클릭 -> 깃허브 이동 -> 인증 -> 콜백으로 다시 돌아와서 -> 코드 장고에 전달 -> 장고와 깃허브 API 통신 -> 로그인
 
-> > github.com/settings/applications/new
+> > 로그인(https://github.com/settings/applications/new)
 > > 깃허브 앱 만들기
 
 > > > 이름적고, url 적고(http://127.0.0.1:3000/)
