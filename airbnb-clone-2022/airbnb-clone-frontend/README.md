@@ -191,3 +191,14 @@
 > > > > https://github.com/login/oauth/authorize?client_id=5ce938e4337bbea704be&scope=read:user,user:email
 
 > +++ +++ +++
+
+> 카카오 로그인 만들기
+
+> > 로그인(https://developers.kakao.com/console/app)
+> > 카카오 앱 만들기
+
+> > > 이름 적고 사업자명 적고(아무렇게나 지으면 됨) 체크, 저장
+> > > 앱 들어가서 -> 카카오 로그인 -> 상태 활성화 -> redirect url에 적기(http://127.0.0.1:3000/social/kakao)
+> > > 동의 항목 -> 닉네임 -> 필수 동의 체크 -> 목적은 아무렇게 -> 프로필 사진 -> 필수 동의 -> 목적은 아무렇게 -> 저장
+
+> +++ +++ +++
