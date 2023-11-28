@@ -14,6 +14,7 @@ import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import RoomDetail from "./routes/RoomDetail";
 import GithubConfirm from "./routes/GithubConfirm";
+import KakaoConfirm from "./routes/KakaoConfirm";
 
 // version 6.4(router.tsx)
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
           {
             path: "github",
             element: <GithubConfirm />,
+          },
+          {
+            path: "kakao",
+            element: <KakaoConfirm />,
           },
         ],
       },
