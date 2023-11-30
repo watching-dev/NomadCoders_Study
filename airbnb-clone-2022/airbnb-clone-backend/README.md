@@ -206,3 +206,10 @@
 > > > > > > api 통신 URL(https://api.github.com/user)
 
 > +++ +++ +++
+
+> 에러 해결
+
+> > django.db.utils.IntegrityError: NOT NULL constraint failed: users_user.email
+
+> > 문제는 email 값이 없다는것 -> 이렇게 나오면 migration 해야함 또는 api에서 값을 못가져와서 그런것 -> 진짜 값이 없음
+> > 강의에서와는 다르게 카카오에서 email 제공을 안해줌 -> (하다가 까먹었는데) 카카오 개발자 페이지에서 이메일 동의가 권한 없는걸로 바껴서 아예 불가능 했네
