@@ -63,9 +63,11 @@
 ]  
 },
 
-> > > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+> > > > > > > > > > > > > (react-hook-form 설치) -> npm i react-hook-form
 
-> > > > > > > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
+> > > > > > > > > > > > > > (패키지 삭제) -> npm uninstall @tanstack/react-query
+
+> > > > > > > > > > > > > > > (4버전중 최신 버전 설치) -> npm install @tanstack/react-query@^4
 
 > > > > > > > > > > > > > > > > npm run start
 
@@ -202,3 +204,7 @@
 > > > 동의 항목 -> 닉네임 -> 필수 동의 체크 -> 목적은 아무렇게 -> 프로필 사진 -> 필수 동의 -> 목적은 아무렇게 -> 저장
 
 > +++ +++ +++
+
+> react-hook-form 설치
+
+> > npm i react-hook-form
