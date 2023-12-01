@@ -13,11 +13,19 @@ import {
   Text,
   VStack,
   color,
+  useToast,
 } from "@chakra-ui/react";
 import { FaLock, FaUserNinja } from "react-icons/fa";
 import SocialLogin from "./SocialLogin";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import {
+  IUsernameLoginError,
+  IUsernameLoginSuccess,
+  IUsernameLoginVariables,
+  usernameLogIn,
+} from "../api";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -36,7 +44,32 @@ export default function LoginModal({ onClose, isOpen }: LoginModalProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<iForm>();
-  const onSubmit = (data: iForm) => {};
+  const toast = useToast();
+  const queryClient = useQueryClient();
+  const mutation = useMutation<
+    IUsernameLoginSuccess,
+    IUsernameLoginError,
+    IUsernameLoginVariables
+  >(usernameLogIn, {
+    onMutate: () => {},
+
+    onSuccess: (data) => {
+      // data.ok;
+      toast({
+        title: "Welcome back!",
+        status: "success",
+      });
+      onClose();
+      queryClient.refetchQueries(["me"]);
+    },
+
+    onError: (error) => {
+      // error.error;
+    },
+  });
+  const onSubmit = ({ username, password }: iForm) => {
+    mutation.mutate({ username, password });
+  };
   return (
     <Modal onClose={onClose} isOpen={isOpen}>
       <ModalOverlay />
@@ -84,7 +117,13 @@ export default function LoginModal({ onClose, isOpen }: LoginModalProps) {
               </Text>
             </InputGroup>
           </VStack>
-          <Button type="submit" mt={4} colorScheme="red" w="100%">
+          <Button
+            isLoading={mutation.isLoading}
+            type="submit"
+            mt={4}
+            colorScheme="red"
+            w="100%"
+          >
             Log in
           </Button>
           <SocialLogin />
