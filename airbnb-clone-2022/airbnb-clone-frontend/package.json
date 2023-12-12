@@ -4,19 +4,14 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@tanstack/react-query": "^4.36.1",
-    "@tanstack/react-query-devtools": "^5.8.3",
-    "axios": "^1.6.1",
-    "framer-motion": "^10.16.5",
+    "@tanstack/react-query-devtools": "^5.13.5",
+    "axios": "^1.6.2",
+    "framer-motion": "^10.16.16",
     "js-cookie": "^3.0.5",
-    "react-hook-form": "^7.48.2",
+    "react-hook-form": "^7.49.0",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1"
-  },
-  "devDependencies": {
-    "@types/js-cookie": "^3.0.6",
-    "@types/react": "^18.2.38",
-    "@types/react-dom": "^18.2.17"
   },
   "scripts": {
     "start": "react-scripts start"
@@ -32,5 +27,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17"
   }
 }

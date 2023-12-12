@@ -43,6 +43,7 @@ export default function LoginModal({ onClose, isOpen }: LoginModalProps) {
     watch,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<iForm>();
   const toast = useToast();
   const queryClient = useQueryClient();
@@ -61,10 +62,7 @@ export default function LoginModal({ onClose, isOpen }: LoginModalProps) {
       });
       onClose();
       queryClient.refetchQueries(["me"]);
-    },
-
-    onError: (error) => {
-      // error.error;
+      reset();
     },
   });
   const onSubmit = ({ username, password }: iForm) => {
@@ -117,6 +115,11 @@ export default function LoginModal({ onClose, isOpen }: LoginModalProps) {
               </Text>
             </InputGroup>
           </VStack>
+          {mutation.isError ? (
+            <Text color={"red.500"} textAlign={"center"} fontSize={"sm"}>
+              Username or Password are wrong{" "}
+            </Text>
+          ) : null}
           <Button
             isLoading={mutation.isLoading}
             type="submit"
