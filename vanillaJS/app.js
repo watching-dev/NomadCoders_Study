@@ -12,7 +12,7 @@ function onLoginBtnClick() {
   const username = loginInput.value;
   if (username === "") {
     alert("Please name");
-  } else if (username.length > 15) {
+  } else if (username.lesngth > 15) {
     alert("long");
   }
 }
