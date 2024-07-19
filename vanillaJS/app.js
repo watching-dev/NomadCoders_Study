@@ -9,5 +9,11 @@ function onLoginBtnClick() {
   console.dir(loginInput);
   console.log(loginInput);
   console.log(loginInput.value);
+  const username = loginInput.value;
+  if (username === "") {
+    alert("Please name");
+  } else if (username.length > 15) {
+    alert("long");
+  }
 }
 loginButton.addEventListener("click", onLoginBtnClick);
